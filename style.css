@@ -1,0 +1,1147 @@
+body,html{
+    font-family: 'Nunito Sans','Noto Sans TC', sans-serif;
+    overflow-y: hidden; 
+}
+
+p,a,i{
+    margin: 0;
+    user-select: none;
+}
+
+/*header*/
+
+header{
+    position: relative;
+    max-width: 100vw;
+    height: 100vh;
+}
+
+.bgVideo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index:-99999;
+    overflow: hidden;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.bgVideo::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00000050;
+    background-image: url(./images/filter.png);
+    background-size: 10px 10px;
+    background-repeat: repeat;
+    background-position: 50%;
+}
+
+
+.navBar{
+    list-style: none;
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+    background-color: black;
+    margin: 0;
+    position: fixed;
+    width: 100vw;
+    padding: 0;
+    z-index: 999998;
+}
+
+
+.navBar .navlink,.navBar .navlogo{
+    text-decoration:none;
+    color: #f2f2f2;
+    font-weight:400; 
+    position: relative;
+    padding: 5px 20px;
+}
+
+.navBar .navlink::before{
+    content: "";
+    position:absolute;
+    width:0%;
+    height:1px;
+    left:0;
+    bottom:0;
+    background-color: #ff452c;
+    transition:all .4s ease-out;
+}
+
+.navBar .navlink::after{
+    content: "";
+    position:absolute;
+    width:0%;
+    height:1px;
+    right:0;
+    top:0;
+    background-color: #ff452c;
+    transition:all .4s ease-out;
+}
+
+.navBar .navlink .ch{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left:50%;
+    transform:translateX(-50%);
+    opacity: 0;
+    filter: blur(10px);
+    letter-spacing: 5px;
+}
+
+
+
+.navlink .en,.navlink .ch{
+    transition: .6s all;
+}
+
+.navlink:hover::before,.navlink:hover::after{
+    width:100%;
+}
+
+.navlink:hover>.en{
+    filter: blur(10px);
+    opacity: 0;
+    transition: .6s all; 
+}
+
+.navlink:hover>.ch{
+    filter: blur(0px);
+    opacity: 1;
+}
+
+.m-menu{
+    display: none;
+    position:fixed;
+    width: 100vw;
+    box-sizing: border-box;
+    z-index: 999999;
+}
+
+.m-navBar{
+    display: block;
+    position:fixed;
+    z-index: 999999;
+    top: 0;
+    left: -102%;
+    background-color: #000000da;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    list-style: none;
+    padding-left: 0;
+}
+
+.m-navBar li{
+    margin:30px 0;
+    margin-left:10px;
+    text-align: center;
+}
+
+.m-navBar a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 30px; 
+}
+
+.m-navBar a:hover{
+    color:#ff452c;; 
+}
+
+.m-navBar .closeBtn{
+    text-align: right;
+    padding: 10px 70px;
+}
+
+.m-navBar a small{
+    font-size: 14px;
+    margin-top:-15px;
+}
+
+
+
+.m-menu a{
+    color: #fff;
+    font-size: 30px;
+}
+
+
+
+.headerTitle{
+    color: #e7e7e7;
+    padding: 200px 0 0 100px;
+    position:relative;
+}
+
+.motoName{ 
+    font-size: 90px;
+    font-weight: 900;
+    margin-bottom: 150px;
+    display:inline-block;
+    overflow: hidden;
+    transform:translateX(-100%);
+    color: #e7e7e7;
+    opacity: 0;
+    padding-left:10px;
+}
+
+.motoName span{ 
+    position:relative;
+    
+}
+
+.motoName .year{
+    font-size: 24px;
+    font-weight: 700;
+    border-bottom: 2px solid #ff452c;
+}
+
+
+.slogonBox{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items:flex-start;
+    overflow: hidden;
+}
+
+.slogon{
+    font-size: 60px;
+    font-weight: 400;
+    transform: skewX(-20deg);
+    letter-spacing: 8px;
+    transform: translateY(200%);
+}
+
+.headerTitle .leftLongLine{
+    position:absolute;
+    height: 100%;
+    width: 3px;
+    background-color: #adadad30;
+    top:155px;
+    left:60px;
+}
+
+.titleLine{
+    position:absolute;
+    background-color: #ff452c;
+    width: 3px;
+    height: 23%;
+    top:95px;
+}
+.slogonLine{
+    position:absolute;
+    width: 3px;
+    background-color: #ff452c;
+    height: 23%;
+    top:393px;
+}
+
+.fixedBlock img{
+    position:fixed;
+    color: #e7e7e7;
+    bottom:30px;
+    left: 30px;
+    z-index: 99999;
+}
+
+.fixedBlock .nowBlock{
+    position:fixed;
+    color: #e7e7e7;
+    bottom:30px;
+    right: 80px;
+    z-index: 99999;
+}
+
+.nowClassText{
+    font-size: 50px;
+    font-weight:300;
+}
+
+.nowBlock{
+    position:relative;
+}
+
+.nowClassText span{
+    font-size: 20px;
+    font-weight:200;
+}
+
+.fixedBlock .line{
+    width: 60px;
+    height: 1px;
+    background-color: #fff;
+    position:absolute;
+    right:-80px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.community{
+    position:fixed;
+    top:50%;
+    transform:translateY(-50%);
+    right:25px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    z-index: 99999;
+}
+
+.community a{
+    color: #fff;
+    font-size: 30px;
+    margin: 10px 0;
+transition: all .5s;
+}
+
+.community a:hover{
+    color:#ff452c;
+}
+
+
+.scrollbox{
+    color: white;
+    position:absolute;
+    left:50%;
+    transform:translateY(-50%);
+    bottom:-35px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.scrollbox .mouse{
+    border: 1px solid #fff;
+    width: 25px;
+    height: 35px;
+    border-radius: 6rem;
+    position: relative;
+}
+
+.mouse .mouseCircle{
+    width: 5px;
+    height: 5px;
+    border-radius:50%;
+    background-color: #fff;
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+    top:5px;
+    animation-name:scrollmove;
+    animation-duration:1.5s;
+    animation-iteration-count:infinite;  
+    animation-timing-function:ease-out;
+}
+
+@keyframes scrollmove{
+    from{
+        top:5px;
+    }
+    40%{
+        opacity: 1;
+    }
+    to{
+        top:75%;
+        opacity: 0;
+    }
+}
+
+.scrollbox p{
+    font-weight: 200;
+}
+
+.scrollbox .scrollLine{
+    width: 1px;
+    height: 20px;
+    background-color: #fff;
+}
+
+@media only screen and (max-width:992px){
+    .bgVideo video,.leftLongLine,.navBar{
+        display: none;
+    }
+    .bgVideo{
+        background-image: url(https://www.yamaha-motor.com.tw/images/motor/XSR700/story-724x430.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .m-menu{
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 50px;
+        align-items: center;
+    }
+
+    .headerTitle{
+        padding-left: 20px;
+    }
+
+    .headerTitle .motoName{
+        font-size: 70px;
+        margin-bottom:30px;
+    }
+
+    .slogonBox p{
+        font-size:40px;
+    }
+
+}
+
+@media only screen and (max-width:768px){
+
+    .scrollbox,.fixedBlock,.community{
+        display: none;
+    }
+
+    .headerTitle .motoName{
+        font-size: 50px;
+        margin-bottom:30px;
+    }
+
+    .slogonBox p{
+        font-size:20px;
+    }
+}
+
+
+/*section story*/
+
+.story{
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    max-width: 100vw;
+
+}
+
+.story::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(./images/filterbox.png);
+    background-repeat: repeat;
+    background-size: 30%;
+}
+
+.story .storyTitle,.features .featuresTitle,.colors .colorTitle,.gallery .galleryTitle,.specifications .specificationsTitle,.accessories .accessoriesTitle{
+    font-size:60px;
+    font-weight: 700;
+    color:#ff452c;
+    background-color: #000;
+    padding:10px 20px;
+    margin-top: 100px;
+    position: relative;
+    z-index: 99;
+}
+
+.story .storyImg{
+    margin-top:-30px;
+    margin-bottom:100px;
+    transform: scaleX(-1);
+    width: 0;
+    height: 700px;
+    background-image: url(https://yamaha.scdn5.secure.raxcdn.com/library/img.jpg?id=5bb543df2a0ab6386830bda6&w=1600);
+    background-repeat: no-repeat;
+    background-position:80% center; 
+    background-size: cover;
+}
+
+
+.storyContent{
+    color: #fff;
+    position: absolute;
+    right:0;
+    top:55%;
+    transform:translateY(-50%);
+    background-color: #000;
+    width: 50%;
+    padding: 30px 0 30px 50px;
+    opacity: 0;
+    transform: translateY(-20%);
+}
+
+.storyContent p{
+    max-width: 95%;
+    
+}
+
+.storyContent .storyContentTitle{
+    font-size: 40px;
+    font-weight: 700;
+    border-left: 5px solid #ff452c;
+    padding-left:15px;
+    margin-bottom: 10px;
+}
+
+.storyContent .storyContentText{
+    font-weight: 100;
+    letter-spacing: 5px;
+    line-height: 30px;
+}
+
+@media only screen and (max-width:960px){
+
+    .story .storyImg{
+        width: 100%;
+    }
+
+    .storyContent{
+        width: 100%;
+        height: 40%;
+        background-color: #00000095;
+    }
+
+    .storyContent p{
+        margin-left: 30px;
+    }
+}
+
+@media only screen and (max-width:768px){
+
+    .story .storyTitle{
+        margin-top:10px;
+    }
+
+    .storyContent{
+        width: 100%;
+        height: 100%;
+    }
+
+    .storyContent .storyContentText{
+        line-height: 25px;
+    }
+
+    .storyContentTitle{
+        font-size: 20px;
+    }
+
+    .storyContent p{
+        margin-left: 10px;
+    }
+}
+
+
+/*section features*/
+
+.features{
+    color: #fff;
+    position:relative;
+    overflow: hidden;
+    background-color: #00000095;
+    padding: 130px 0;
+}
+
+.features::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    background:url(https://yamaha.scdn5.secure.raxcdn.com/library/img.jpg?id=5bb543812a0ab6386830b3de&w=1600);
+    background-size: 150%;
+    background-position: center;
+    background-repeat: no-repeat; 
+    width: 100%;
+    height: 100%;
+    z-index: -99;
+    filter: blur(20px);
+    overflow: hidden;
+}
+
+
+.featureContent{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-bottom:50px;
+    margin-top:60px;
+}
+
+.featureTextBox{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.featureTextBox .featureTitle{
+    font-size: 40px;
+    background-color: #000;
+    padding: 25px;
+    margin-bottom:50px;
+    position: relative;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.featureTextBox .featureTitle::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:10px;
+    background-color: #ff452c;
+    width: 200px;
+    height: 5px;
+}
+
+.featureTextBox .featureText{
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 50px;
+    transform: translateY(50%);
+    opacity: 0;
+}
+
+
+.featuresCarousel{
+    width: 700px;
+    height: 500px;
+    position: relative;
+}
+
+.featureImages{
+    width: 0%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.featureImages .animColor{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    background-color: #2d2d2d;
+    top: 0;
+    right:0;
+    z-index: 5;
+}
+
+
+
+.featureImages img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+    left: 0;
+}
+
+.featureImages .Img-0{left: 0%;  }
+.featureImages .Img-1{left: 100%; }
+.featureImages .Img-2{left: 200%; }
+.featureImages .Img-3{left: 300%; }
+.featureImages .Img-4{left: 400%; }
+.featureImages .Img-5{left: 500%; }
+.featureImages .Img-6{left: 600%; }
+.featureImages .Img-7{left: 700%; }
+
+
+.featuresCarousel a{
+    transition: all .5s;
+    transform: translateY(30%);
+    opacity:0;
+}
+
+.featuresCarousel .leftBtn:hover,.featuresCarousel .rightBtn:hover{
+    background-color: #aaa;
+    color: #000;
+}
+
+
+.featuresCarousel a{
+    position: absolute;
+    bottom:-30px;
+    left: 30px;
+    color: #fff;
+    background-color: #2d2d2d;
+    padding: 25px 30px;
+}
+
+.featuresCarousel .rightBtn{
+    left: 120px;
+}
+
+@media only screen and (max-width:960px){
+
+    .features{
+        padding-top:50px; 
+    }
+
+    .featureContent{
+        flex-direction: column-reverse;
+    }
+
+    .featureTextBox{
+        width: 90%;
+        margin-top:40px;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .featuresCarousel{
+        width: 90%;
+        height: 370px;
+    }
+
+}
+
+
+/*section colors*/
+
+.colors{
+    background-color: #000;
+    padding-top:130px;
+}
+
+.colorContent{
+    display:flex;
+    justify-content:space-between;
+    padding-right: 200px;
+    margin-top:80px;
+}
+
+.colorContent .colorMotoImg{
+    background-image: url(./images/XSR700AluminumRed.png);
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: 90% center;
+    width: 50%;
+    height: 700px;
+    transform:translateX(-100%);
+}
+
+.colorContent .colorLinkGroup{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    align-items:center;
+    justify-content:center;
+}
+
+.colorContent .colorLinkGroup a{
+    color:#fff;
+    opacity: .8;
+    font-weight: 100;
+    font-size: 25px;
+    text-decoration: none;
+    margin: 30px 0;
+    width: 100%;
+    padding: 30px 40px;
+    border: 1px solid #fff;
+    transition:all .5s;
+    touch-action: none;
+    opacity: 0;
+}
+
+.colorContent .colorLinkGroup a:hover{
+    background-color: #aaa;
+    color: #000;
+}
+
+.colorContent .colorLinkGroup .active{
+    background-color: #2d2d2d;
+    border:none;
+    border-left: 5px solid #ff452c;
+    text-decoration:underline;
+    opacity: 0;
+}
+
+@media only screen and (max-width:960px){
+    
+    .colorContent{
+        padding-right:0px;
+        flex-direction:column;
+        align-items: center;
+        margin-top:40px;
+    }
+
+    .colorContent .colorLinkGroup a{
+        font-size: 20px;
+        margin: 10px 0; 
+    }
+
+    .colorContent .colorMotoImg{
+        width: 90%;
+        background-position: center;
+        background-size: contain;
+
+    }
+    
+    .colorContent .colorLinkGroup{
+        flex-flow: row wrap;
+        width: 90%;
+    }
+
+    .colorContent .colorLinkGroup a{
+        width: 35%;
+        margin: 5px 10px;
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width:768px){
+
+    .colorContent .colorMotoImg{
+        width: 100%;
+        height: 300px;
+    }
+
+    .colorContent .colorLinkGroup a{
+        width: 90%;
+        margin: 5px 10px;
+        padding: 20px;
+    }
+}
+
+/*section gallery*/
+
+.gallery{
+    background-color: #000;
+    color: #fff;
+    padding-top:200px;
+}
+
+.gallery .imgGroup{
+    margin-top:-30px;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #2d2d2d;
+    padding: 55px 0 ;
+}
+
+.gallery .imgGroup a{
+    width:30%;
+    margin: 0 2px;
+    transform: translateY(30%);
+    opacity: 0;
+}
+
+.gallery .imgGroup img{
+    filter:brightness(80%);
+    transition: all .5s;
+}
+
+.gallery .imgGroup img:hover{
+    filter:none;
+}
+
+@media only screen and (max-width:768px){
+    .gallery .imgGroup{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery .imgGroup a{
+        width:90%;
+    }
+}
+
+/*section specifications*/
+
+.specifications{
+    background-color: #000;
+    color: #fff;
+    font-weight: 100;
+    padding:  100px 0;
+}
+
+.specificationsTable{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top:50px;
+    opacity: 0;
+    transform: translateY(20%);
+}
+
+.specifications table{
+    border-collapse: collapse;
+    border:1px solid #fff;
+    width: 60%;
+}
+
+.specifications table th,.specifications table td{
+    border:1px solid #fff;
+    padding: 20px 0;
+}
+
+.specifications table th{
+    font-weight: 400;
+    font-size: 20px;
+    background-color: #2d2d2d;
+}
+
+.specifications table tr:nth-of-type(even) td{
+    background-color: #2d2d2d70;
+}
+
+@media only screen and (max-width:768px){
+    .specifications table{
+        width: 85%;
+    }
+}
+
+/*section accessories*/
+
+.accessories{
+    background-color: #000;
+    color: #fff;
+    padding-top: 100px;
+}
+
+.accessoriesContent{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
+
+.accessoriesMoto,.accessoriesBody{
+    
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    transform: translateY(20%);
+    opacity: 0;
+}
+
+.motoImg{
+    position:relative;
+}
+
+.accessoriesMoto .motoImg p,.accessoriesBody .motoImg p{
+    writing-mode: vertical-lr;
+    position:absolute;
+    letter-spacing: 10px;
+    background-color: #000;
+    padding: 10px 20px;
+    font-size: 30px;
+    top: 0;
+    left:0;
+}
+
+.accessoriesMoto .motoImg,.accessoriesBody .motoImg{
+    background-image: url(https://www.yamaha-motor.com.tw/news/2019XSR/201901_XSR_big.jpg);
+    width: 10%;
+    height:400px;
+    background-size: cover;
+    background-position: 69% center;
+    background-repeat: no-repeat;
+}
+.accessoriesMoto .motoImg{
+    background-image: url(https://www.yamaha-motor.com.tw/images/motor/XSR700/story-724x430.jpg);
+    background-size: cover;
+    background-position: 34% 0;
+}
+
+.accessoriesContent .objGroup{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    border: 1px solid #fff;
+    position: relative;
+}
+
+.accessoriesContent .objGroup .obj{
+    text-align: center; 
+    width: 25%;
+    height: auto;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+} 
+
+.accessoriesContent .objGroup .obj img,.accessoriesContent .objGroup .obj p{
+    transition: all .5s;
+}
+
+.accessoriesContent .objGroup .obj:hover>img{
+    filter:brightness(60%);
+}
+
+.accessoriesContent .objGroup .obj:hover>p{
+    color: #ff452c;
+}
+
+.accessoriesContent .objGroup .more{
+    background-color: #2d2d2d30;
+    font-size: 30px;
+    padding: 33% 0;
+    margin-bottom:3px; 
+    position: relative;
+    z-index:0;
+    overflow: hidden;
+}
+
+.accessoriesContent .objGroup .more::after{
+    content: "";
+    position:absolute;
+    top:0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://www.yamaha-motor.com.tw/styles/images/apparel/B15-PJ101-B0-0S.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(5px) brightness(.5);
+}
+
+.accessoriesContent .objGroup .motomore::after{
+    background-image: url(https://www.yamaha-motor.com.tw/styles/images/accessories/XSR700/pic03.jpg);
+}
+
+@media only screen and (max-width:960px){
+
+    .accessoriesMoto .motoImg, .accessoriesBody .motoImg{
+        height: 500px;
+    }
+
+    .accessoriesMoto .motoImg p, .accessoriesBody .motoImg p{
+        padding: 5px 10px;
+    }
+
+    .accessoriesContent .objGroup{
+        flex-direction: column;
+        width: 30%;
+    }
+
+    .accessoriesContent .objGroup .obj{
+        width: 50%;
+        margin: 10px 0;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .accessoriesContent .objGroup{
+        flex-direction: column;
+        width: 70%;
+    }
+
+    .accessoriesMoto .motoImg, .accessoriesBody .motoImg{
+        height: 700px;
+        width: 20%;
+    }
+}
+
+
+/*footer*/
+
+footer{
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 100;
+    letter-spacing: 5px;
+    font-size: 12px;
+    padding: 100px 0  30px 0;
+}
+
+footer img{
+    margin: 10px 0;
+}
+
+footer p {
+    margin-top:20px;
+    text-align: center;
+}
+
+
+/*loading*/
+
+.loading{
+    position:fixed;
+    width: 100vw;
+    height:100vh;
+    background-color: #000;
+    z-index:999999;
+    top:0;
+    left:0;
+    color:#000;
+}
+
+.loading .loadingContent{
+    position:absolute;
+    left:50%;
+    top:50%;
+    width: 14rem;
+    height: 14rem;
+    border-radius: 10rem;
+    transform:translate(-50%,-50%);
+    font-weight:900;
+    font-size:2rem;
+    letter-spacing:10px;
+    overflow:hidden;
+    z-index: 0;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.loading img{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width: 15rem;
+    height: 15rem;
+    opacity: 0;
+}
+
+.loading .loadingContent p{
+    text-align:center;
+    padding-left:5px;
+}
+
+.loading .loadingContent span{
+    letter-spacing:0px;
+}
+
+.lodingBG{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color: #fff;
+    top: 369px;
+    left:0;
+    z-index: -1;
+    animation-name: loading;
+    animation-duration: 3s; 
+    animation-fill-mode:forwards;
+}
+
+
+@keyframes loading{
+    form{
+        top:369px;
+    }
+    to{
+        top:0px;
+    }
+}
