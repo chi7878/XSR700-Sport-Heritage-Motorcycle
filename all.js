@@ -79,10 +79,6 @@ $(document).ready(function() {
 
             if (scrolltop >= storyposition.offset().top - 600) {
                 nowText(storyposition[0].dataset.position);
-                TweenMax.to(".storyImg", 2, {
-                    width: "55vw",
-                    ease: Expo.easeOut,
-                });
                 TweenMax.to(".storyContent", 2, {
                     opacity: "1",
                     y: "-50%",
