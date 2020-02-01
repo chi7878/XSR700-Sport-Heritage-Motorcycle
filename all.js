@@ -68,7 +68,8 @@ $(document).ready(function() {
             });
         };
 
-        $(window).on("mousewheel", function(el) {
+        //start scrollanimation
+        let scrollanim = function(el) {
             let scrolltop = $(window).scrollTop();
             let storyposition = $(".story");
             let featuresposition = $(".features");
@@ -164,7 +165,10 @@ $(document).ready(function() {
                     ease: Circ.easeOut,
                 }).delay(1);
             }
-        });
+        }
+        $(window).on("mousewheel",scrollanim);
+        $(window).scroll(scrollanim);
+        //end scrollanimation
 
         $(".navlink").on("click", function(el) {
             el.preventDefault();
