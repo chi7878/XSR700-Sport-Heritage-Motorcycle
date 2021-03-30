@@ -371,7 +371,7 @@ transition: all .5s;
         display: none;
     }
     .bgVideo{
-        background-image: url(https://www.yamaha-motor.com.tw/images/motor/XSR700/story-724x430.jpg);
+        background-image: url(./images/banner.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -949,7 +949,7 @@ transition: all .5s;
     background-repeat: no-repeat;
 }
 .accessoriesMoto .motoImg{
-    background-image: url(https://www.yamaha-motor.com.tw/images/motor/XSR700/story-724x430.jpg);
+    background-image: url(./images/banner.jpg);
     background-size: cover;
     background-position: 34% 0;
 }
@@ -1059,7 +1059,7 @@ footer{
     font-weight: 100;
     letter-spacing: 5px;
     font-size: 12px;
-    padding: 100px 0  30px 0;
+    padding: 130px 0  30px 0;
 }
 
 footer img{
